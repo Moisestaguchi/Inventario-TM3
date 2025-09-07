@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Inclui o Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-link {
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200">
+    <div class="min-h-screen flex">
+        <!-- Menu de Navegação Lateral -->
+        <aside class="w-64 bg-slate-800 shadow-xl p-6 flex flex-col justify-between rounded-r-2xl">
+            <div>
+                <h1 class="text-3xl font-bold mb-8 text-white">Inventário TM3</h1>
+                <nav class="space-y-4">
+                    <a href="#" class="flex items-center space-x-3 p-3 rounded-lg nav-link bg-slate-700">
+                        <span class="text-xl">📊</span>
+                        <span class="font-medium">Dashboard</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 p-3 rounded-lg nav-link">
+                        <span class="text-xl">📦</span>
+                        <span class="font-medium">Ver Estoque</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 p-3 rounded-lg nav-link">
+                        <span class="text-xl">🛠️</span>
+                        <span class="font-medium">Ações</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-3 p-3 rounded-lg nav-link">
+                        <span class="text-xl">⚙️</span>
+                        <span class="font-medium">Configurações</span>
+                    </a>
+                </nav>
+            </div>
+            <div class="mt-auto">
+                <button class="w-full text-center py-3 px-4 rounded-lg bg-red-600 hover:bg-red-700 font-bold transition-colors">
+                    Sair
+                </button>
+            </div>
+        </aside>
+
+        <!-- Conteúdo Principal do Dashboard -->
+        <main class="flex-1 p-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-10">
+                    <h1 class="text-5xl font-extrabold text-white">Dashboard</h1>
+                    <p class="mt-2 text-lg text-slate-400">Aqui estão as informações mais recentes sobre o seu estoque.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Card de Resumo do Inventário -->
+                    <div class="bg-slate-800 p-6 rounded-2xl shadow-2xl">
+                        <h2 class="text-xl font-semibold mb-2">Resumo Geral</h2>
+                        <p class="text-sm text-slate-400">Total de itens: <span class="text-white font-bold">120</span></p>
+                        <p class="text-sm text-slate-400">Itens em falta: <span class="text-red-400 font-bold">5</span></p>
+                        <p class="text-sm text-slate-400">Valor total: <span class="text-green-400 font-bold">R$ 5.400,00</span></p>
+                    </div>
+
+                    <!-- Card de Itens em Falta (Dados Fictícios) -->
+                    <div class="bg-slate-800 p-6 rounded-2xl shadow-2xl col-span-1 md:col-span-2">
+                        <h2 class="text-xl font-semibold mb-2">Avisos - Itens em Falta</h2>
+                        <ul class="space-y-3 mt-4">
+                            <li class="flex justify-between items-center bg-slate-700 p-3 rounded-lg">
+                                <span class="text-slate-200">Parafuso M8</span>
+                                <span class="text-red-400 font-bold">0 em estoque</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-slate-700 p-3 rounded-lg">
+                                <span class="text-slate-200">Placa de Vídeo RTX 3060</span>
+                                <span class="text-red-400 font-bold">1 em estoque</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-slate-700 p-3 rounded-lg">
+                                <span class="text-slate-200">Mousepad Gamer</span>
+                                <span class="text-red-400 font-bold">2 em estoque</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card de Ações Rápidas -->
+                    <div class="bg-slate-800 p-6 rounded-2xl shadow-2xl">
+                        <h2 class="text-xl font-semibold mb-2">Ações Rápidas</h2>
+                        <ul class="list-disc list-inside text-sm text-slate-400 space-y-2">
+                            <li><a href="#" class="text-blue-400 hover:underline">Adicionar novo item</a></li>
+                            <li><a href="#" class="text-blue-400 hover:underline">Gerar relatório</a></li>
+                            <li><a href="#" class="text-blue-400 hover:underline">Ver histórico de movimentação</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
